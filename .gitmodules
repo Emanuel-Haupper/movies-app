@@ -1,0 +1,3 @@
+[submodule "src/_my-components"]
+	path = src/_my-components
+	url = https://github.com/Emanuel-Haupper/my-components-library

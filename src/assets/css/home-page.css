@@ -1,0 +1,30 @@
+.home-page {
+  position: relative;
+  z-index: 4;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-page__state {
+  margin: -1rem 0 0;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.home-page__state--error {
+  color: var(--danger);
+}
+
+/* ── Stats ── */
+.home-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+}
+
+/* ── Planets ── */
+.home-planets {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 1rem;
+}

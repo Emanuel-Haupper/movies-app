@@ -1,0 +1,83 @@
+@import '../../_my-components/components/css/theme.css';
+
+/*
+  Map _my-components theme vars to this app's colour palette.
+  Override any --mc-* variable here to retheme the entire lib.
+*/
+:root {
+  --mc-accent: var(--accent);
+  --mc-accent-hover: var(--accent-hover);
+  --mc-accent-subtle: var(--accent-subtle);
+  --mc-text: var(--text);
+  --mc-text-h: var(--text-h);
+  --mc-text-dim: var(--text-dim);
+  --mc-bg: var(--bg);
+  --mc-surface: var(--surface);
+  --mc-surface-2: var(--surface-2);
+  --mc-border: var(--border);
+  --mc-success: var(--success);
+  --mc-warning: var(--warning);
+  --mc-danger: var(--danger);
+}
+
+.main-title-font {
+  font-family: 'Rubik Iso', sans-serif;
+  font-weight: 400;
+}
+
+.app-shell {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  user-select: none;
+}
+
+.app-content {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  width: 100%;
+}
+
+.app-content__inner {
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.page-transition {
+  animation: change-page 0.4s ease-in-out;
+}
+
+/* ── Entry wrapper ── */
+.staggered-card-entry {
+  animation: card-in 0.6s cubic-bezier(0.22, 1, 0.36, 1) calc(var(--card-index, 0) * 80ms) both;
+}
+
+@keyframes change-page {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes card-in {
+  from {
+    opacity: 0;
+    transform: translateY(24px) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 768px) {
+  .app-content__inner {
+    padding: 1.25rem;
+  }
+}

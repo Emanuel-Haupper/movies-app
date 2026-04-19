@@ -1,0 +1,24 @@
+.movies-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.movies-page__state {
+  margin: 0;
+  padding: 0.5rem 0.1rem 0.25rem;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.movies-page__state--error {
+  color: var(--danger);
+}
+
+.imdb-score {
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.imdb-score--high   { color: var(--success); }
+.imdb-score--mid    { color: var(--warning); }
+.imdb-score--low    { color: var(--text-dim); }
