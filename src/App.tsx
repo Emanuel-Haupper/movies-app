@@ -1,10 +1,7 @@
 
 import { Film, House } from 'lucide-react'
-import { Content, Footer, Topbar } from './_my-components'
 import './assets/css/app.css'
 import { useState } from 'react'
-import { HomePage } from './pages/HomePage'
-import { MoviesPage } from './pages/MoviesPage'
 
 type Page = 'home' | 'movies'
 
@@ -26,15 +23,15 @@ function App() {
 
   return (
     <main className='app-shell'>
-      <Topbar
+      {/* <Topbar
         appName="Movie Master"
         logo={<Film size={18} strokeWidth={1.6} />}
         appNameClassName='main-title-font'
         items={NAV_ITEMS}
         currentItem={page}
         onNavigate={(id) => setPage(id as Page)}
-      />
-      <main className="app-content">
+      /> */}
+      {/* <main className="app-content">
         <Content className="app-content__inner">
           {page === 'home' && <HomePage />}
           {page === 'movies' && <MoviesPage />}
@@ -43,7 +40,8 @@ function App() {
             notes={['Built with React + WebGL']}
           />
         </Content>
-      </main>
+      </main> */}
+      Hello, World!
     </main>
   )
 }
